@@ -21,9 +21,6 @@ jobs:
       - name: Install dependencies
         run: npm install  # 依存関係をインストール
 
-      - name: Run tests (example)
-        run: npm test  # テストを実行 (もしあれば)
-
       # 他に追加したいステップがあれば、ここに記述 (例: ビルド、デプロイなど)
       - name: Example step
         run: echo "This is an example action triggered by a push."
