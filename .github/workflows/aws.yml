@@ -37,6 +37,7 @@ env:
   ECS_CLUSTER: MY_ECS_CLUSTER                 # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION: .aws/taskdef.json      # set this to the path to your Amazon ECS task definition
   ECS_CLOUDFORMATION_DEFINITION: .aws/httpst4.yaml
+  ECS_CLOUDFORMATION_STACK_NAME: my-ecs-stack
                                                
   CONTAINER_NAME: MY_CONTAINER_NAME
 
@@ -64,7 +65,7 @@ jobs:
       run: |
         aws cloudformation deploy \
           --template-file $ECS_CLOUDFORMATION_DEFINITION
-          --stack-name MyGitHubStack \
+          --stack-name $ECS_CLOUDFORMATION_STACK_NAME \
           --capabilities CAPABILITY_IAM
 
     - name: Login to Amazon ECR
