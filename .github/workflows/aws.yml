@@ -64,7 +64,7 @@ jobs:
     - name: Deploy CloudFormation Stack
       run: |
         aws cloudformation deploy \
-          --template-file $ECS_CLOUDFORMATION_DEFINITION
+          --template-file $ECS_CLOUDFORMATION_DEFINITION \
           --stack-name $ECS_CLOUDFORMATION_STACK_NAME \
           --capabilities CAPABILITY_IAM
 
