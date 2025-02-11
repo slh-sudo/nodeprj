@@ -37,9 +37,8 @@ env:
   ECS_CLUSTER: MY_ECS_CLUSTER                 # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION: .aws/taskdef.json      # set this to the path to your Amazon ECS task definition
   ECS_CLOUDFORMATION_DEFINITION: .aws/httpst4.yaml
-  ECS_CLOUDFORMATION_STACK_NAME: my-ecs-stack
-                                               
-  CONTAINER_NAME: MY_CONTAINER_NAME
+  ECS_CLOUDFORMATION_STACK_NAME: my-ecs-stack                
+  CONTAINER_NAME: app-container
 
 permissions:
   contents: read
