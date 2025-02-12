@@ -83,4 +83,5 @@ jobs:
           --template-file $ECS_CLOUDFORMATION_DEFINITION \
           --stack-name $ECS_CLOUDFORMATION_STACK_NAME \
           --capabilities CAPABILITY_IAM\
-          --parameter-overrides: "ImageUri=${{ steps.build-image.outputs.image }}"        
+          --parameter-overrides "ImageUri=${{ steps.build-image.outputs.image }}"
+               
