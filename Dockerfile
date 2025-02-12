@@ -13,7 +13,7 @@ COPY . .
 RUN npm install
 
 # ポートを公開 (アプリケーションが使用するポート)
-EXPOSE 3000
+EXPOSE 80
 
 # アプリケーションを起動するコマンド
 CMD ["npm", "start"]
